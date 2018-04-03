@@ -1,0 +1,15 @@
+<nz-card class="cardList">
+  <ng-template #body>
+    <div class="custom-image">
+      <a (click)="toHealthy(goods)">
+        <img alt="example" width="100%" src="assets/images/sp0{{index}}.jpg" />
+      </a>
+    </div>
+    <div class="custom-card">
+      <h3>{{goods.name}}</h3>
+      <p>难度系数</p>
+      <nz-rate [ngModel]="goods.difficulty" nzAllowHalf nzDisabled></nz-rate>
+      <span *ngIf="goods.difficulty" class="ant-rate-text">{{goods.difficulty}} 星</span>
+    </div>
+  </ng-template> 
+</nz-card>

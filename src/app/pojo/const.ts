@@ -1,0 +1,1 @@
+export const url = "http://47.97.166.254:8080/springboot-mybatis-demo-0.0.1-SNAPSHOT";

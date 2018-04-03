@@ -1,0 +1,38 @@
+<ng-container *ngIf="isShowComment; else elseTemplate">
+  <nz-card>
+    <ng-template #title>
+      <p> 吐槽一下</p>
+    </ng-template>
+    <ng-template #body>
+      <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="'扯淡、吐槽、表扬、鼓励……想说啥就说啥！'"></nz-input>
+      <button nz-button [nzType]="'primary'" class="commentBtn" (click)="addComment()">
+        <span>评 论</span>
+      </button>
+    </ng-template>
+  </nz-card>
+</ng-container>
+<ng-template #elseTemplate>
+  <h2>请登录后再来评论！</h2>
+</ng-template>
+
+
+<br>
+<nz-card>
+  <ng-template #title>
+    <p>水友评论</p>
+  </ng-template>
+  <ng-template #body>
+    <nz-table #nzTable [nzDataSource]="commont" [nzPageSize]="8">
+      <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+          <td nz-td style="width:150px;">
+            <nz-avatar [nzSrc]="'assets/images/head/' + 1 + '.png'" [nzSize]="'large'"></nz-avatar>
+            <strong style="margin-left:5px;">{{data.username}}</strong>
+          </td>
+          <td nz-td style="vertical-align:bottom;">{{data.comment}}</td>
+          <td nz-td style="vertical-align:bottom;"> <span>{{data.date | date:'yyyy-MM-dd HH:mm'}}</span></td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </ng-template>
+</nz-card>

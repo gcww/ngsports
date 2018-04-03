@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>NgSports</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="edge">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+  <script src="http://cdn.hcharts.cn/highcharts/highcharts-more.js"></script>
+</head>
+<style type="text/css">
+  .container_root {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+   .container_root .point {
+    width: 10px;
+    height: 10px;
+    background: #2196F3;
+    border-radius: 50%;
+    float: left;
+    margin-left: 5px;
+    animation: myAnima 1.2s ease-in-out infinite;
+  }
+
+  .container_root .point .two {
+    animation-delay: 200ms;
+  }
+
+  .container_root .point .three {
+    animation-delay: 400ms;
+  }
+
+  @keyframes myAnima {
+    from {
+      opacity: 0.8
+    }
+    to {
+      opacity: 0
+    }
+  }
+</style>
+
+<body>
+
+  <app-root>
+    <div class="container_root">
+      <div class="point one"></div>
+      <div class="point two"></div>
+      <div class="point three"></div>
+    </div>
+  </app-root>
+  <script>
+    window.onbeforeunload = function () {
+      if (!localStorage.getItem("autoLogin")) {
+        localStorage.removeItem("username");
+      }
+    }
+  </script>
+</body>
+
+</html>

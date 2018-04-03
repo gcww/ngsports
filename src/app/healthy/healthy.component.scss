@@ -1,0 +1,98 @@
+.o-video-guide-pics2 {
+    width: 100%;
+    background: #fff;
+    padding: 26px 0 24px 0;
+    font-family: "microsoft YaHei";
+    margin-bottom: 10px;
+}
+.o-video-guide-pics2 .guide-pics-title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap {
+    margin: 18px 16px 0 33px;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list {
+    margin-right: -12px;
+    width: 100%;
+}
+
+ol, ul, menu {
+    list-style: none outside none;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li {
+    width: 32%;
+    float: left;
+    margin: 0 4px;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li .img-wrap {
+    position: relative;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li img {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-right: 8px;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
+
+img {
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li .gif-mask.hide {
+    display: none;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li .gif-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li {
+    width: 32%;
+    float: left;
+    margin: 0 4px;
+}
+
+.tbr_pctan ul, li {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li .guide-point-wrap {
+    border-right: 1px solid #ebebeb;
+}
+
+.o-video-guide-pics2 .guide-pic-wrap .guide-pic-list li pre {
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    position: relative;
+    margin: 16px 6px 0 0;
+    text-align: justify;
+    padding-right: 2px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: Tahoma,"Microsoft YaHei",sans-serif;
+}

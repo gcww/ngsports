@@ -1,0 +1,25 @@
+.navbg {
+    background: #fff;
+}
+
+.ul-border-bottom {
+    border-bottom: 0;
+}
+
+.li-right>li {
+    float: right;
+}
+
+.logo {
+    height: 55px;
+    float: right;
+}
+
+
+ :host ::ng-deep .ant-modal {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    top:  40%;
+    padding-bottom: 24px;
+}

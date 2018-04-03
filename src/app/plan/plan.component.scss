@@ -1,0 +1,40 @@
+.plan-panel {
+    min-width: 1250px;
+    margin: 20px auto;
+    .flex-float {
+        min-height: 870px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0;
+    text-align: center;
+    font-family: "楷体";
+    font-weight: 550;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.53);
+    font-family: "楷体";
+    font-weight: 550;
+    margin-left: 15px;
+    line-height: 24px;
+    font-size: 1rem;
+}
+
+.right-table-p{
+    color: rgba(0, 0, 0, 0.53);
+    font-family: "楷体";
+    margin-left: 0px;
+    font-weight: 550;
+    line-height: 24px;
+    font-size: 0.8rem;
+}

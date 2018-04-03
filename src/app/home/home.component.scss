@@ -1,0 +1,118 @@
+:host ::ng-deep .ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    color: #fff;
+    overflow: hidden;
+}
+
+.picture {
+    height: 460px!important;
+}
+
+.picture>h3 {
+    color: #fff;
+}
+
+ :host ::ng-deep .custom-image img {
+    display: block;
+}
+
+ :host ::ng-deep .custom-card {
+    padding: 10px 16px;
+}
+
+ :host ::ng-deep .custom-card p {
+    color: #999;
+}
+
+ :host ::ng-deep .ant-card-body {
+    padding: 0;
+}
+
+.index_title {
+    float: left;
+    text-align: center;
+    width: 100%;
+    color: #000;
+    margin: 50px 0;
+}
+
+.index_title span {
+    float: left;
+    width: 100%;
+}
+
+.index_title span:nth-child(1) {
+    font-size: 36px;
+}
+
+.index_title span:nth-child(2) {
+    font-size: 18px;
+    color: #9DA6AC
+}
+
+.loseh2 {
+    margin: 0 0;
+    color: #000;
+    text-align: center;
+    font-size: 35px;
+    font-family: Tahoma, "Microsoft YaHei", sans-serif;
+}
+
+.sfs {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background: url(/assets/images/shu.jpg) no-repeat center;
+    .child {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        height: 120px;
+        .card {
+            width: 500px;
+            span{
+                font-size: 23px;
+                font-weight: 600;
+                line-height: 110px;
+                margin-left: 10px;
+            }
+        }
+        .n {
+            align-self: center;
+            width: 37px;
+            line-height: 37px;
+            height: 37px;
+            font-size: 20px;
+            border: 3px #D2D2D2 solid;
+            text-align: center;
+            border-radius: 50%;
+            background: #fff;
+            padding: 0px 3px;
+        }
+    }
+    .c_left {
+        width: calc(50% + 18.5px);
+        align-self: flex-start;
+    }
+    .c_right {
+        width: calc(50% + 18.5px);
+        align-self: flex-end;
+        .n {
+            order: -1;
+        }
+    }
+    .child:hover {
+        .card {
+            background-color: #364d79;
+            span{
+                color:white;
+            }
+        }
+        .n {
+            border: 3px #364d79 solid;
+        }
+    }
+}

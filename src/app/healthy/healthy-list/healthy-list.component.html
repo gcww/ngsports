@@ -1,0 +1,32 @@
+<nz-card [nzNoHovering]="'true'">
+  <ng-template #title>
+    Body-building movement daquan
+  </ng-template>
+  <ng-template #extra>
+    <a (click)="search()">Combo Search</a>
+  </ng-template>
+  <ng-template #body>
+
+    <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzGutter]="24" class="maring_b30">
+      <div nz-col [nzSpan]="4">
+        <nz-input [(ngModel)]="inputValue" [nzPlaceHolder]=""></nz-input>
+      </div>
+      <div nz-col [nzSpan]="4">
+        <nz-cascader [nzOptions]="_options" [(ngModel)]="_value" (ngModelChange)="_console($event)" (nzChange)="_console($event)">
+        </nz-cascader>
+      </div>
+      <div nz-col [nzSpan]="4">
+        <nz-input [(ngModel)]="inputValue" [nzPlaceHolder]=""></nz-input>
+      </div>
+      <div nz-col [nzSpan]="4">
+        <nz-input [(ngModel)]="inputValue" [nzPlaceHolder]=""></nz-input>
+      </div>
+    </div>
+
+    <div nz-row [nzGutter]="24"> 
+      <div nz-col [nzSpan]="6" *ngFor="let goods of goodsList; let i = index;" class="cardList">
+        <app-picture [goods]="goods" [index]="i"></app-picture>
+      </div>
+    </div>
+  </ng-template>
+</nz-card>

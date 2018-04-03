@@ -1,0 +1,16 @@
+<nz-layout class="layout" style="background:#fff">
+  <nz-header class="my-nav">
+    <app-header></app-header>
+  </nz-header>
+  <nz-content style="padding:0 50px;" class="home-content">
+
+    <div nz-row nz-row [nzType]="'flex'" [nzJustify]="'center'">
+      <div nz-col [nzSpan]="4"></div>
+      <div nz-col [nzSpan]="16" class="main">
+          <router-outlet></router-outlet>
+      </div>
+      <div nz-col [nzSpan]="4"></div>
+    </div>
+  </nz-content>
+  <nz-footer style="text-align: center;">四锅头 ©2018 不减肥就死网 By Angular</nz-footer>
+</nz-layout>

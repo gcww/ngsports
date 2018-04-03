@@ -1,0 +1,300 @@
+<div class="author-panel">
+    <nz-card>
+        <ng-template #body>
+
+            <div nz-row>
+                <div nz-col [nzSpan]="2">
+                    <nz-avatar nzSize="large" [nzSrc]="'assets/images/head/qiangge2.jpg'"></nz-avatar>
+                </div>
+
+                <div nz-col [nzSpan]="9" class="desc">
+                    <div class="desc-title">你好，我是四锅头！</div>
+                    <p>前端烧火棍 | 工程舞王 - 柳树唐伯虎 - 铁岭64姜子牙</p>
+                </div>
+
+                <div nz-col [nzSpan]="13">
+                    <div class="page-extra">
+                        <div>
+                            <p>年龄</p>
+                            <p>23</p>
+                        </div>
+                        <div>
+                            <p>学历</p>
+                            <p>本科</p>
+                        </div>
+                        <div>
+                            <p>工作经验</p>
+                            <p>2.5 Year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </nz-card>
+
+    <div nz-row [nzGutter]="8" style="margin-top:20px;">
+        <div nz-col [nzSpan]="14">
+            <div class="myItem">
+                <nz-card>
+                    <ng-template #title>
+                        我的项目
+                    </ng-template>
+                    <ng-template #body>
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(1)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="SP"></nz-avatar>
+                                <span class="item-title">NG-SPORTS</span>
+                            </div>
+                            <p class="item-content">个人Angular5 + spring boot项目</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头</span>
+                                <span class="item-date">2018.03</span>
+                            </div>
+                        </div>
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(2)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="IP"></nz-avatar>
+                                <span class="item-title">IPORT</span>
+                            </div>
+                            <p class="item-content">日本大型Angularjs项目</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头 六元素</span>
+                                <span class="item-date">2017.03 - 今</span>
+                            </div>
+                        </div>
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(3)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="Home"></nz-avatar>
+                                <span class="item-title">Smart Home</span>
+                            </div>
+                            <p class="item-content">日本若松连锁酒店智能系统</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头 六元素</span>
+                                <span class="item-date">2016.08 - 2017.03</span>
+                            </div>
+                        </div>
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(4)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="车"></nz-avatar>
+                                <span class="item-title">车集网</span>
+                            </div>
+                            <p class="item-content">大连二手车-微信项目</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头</span>
+                                <span class="item-date">2016.11</span>
+                            </div>
+                        </div>
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(5)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="积"></nz-avatar>
+                                <span class="item-title">龙彩积分商城</span>
+                            </div>
+                            <p class="item-content">黑龙江体彩积分商城</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头 龙体科技</span>
+                                <span class="item-date">2016.2 - 2016.5</span>
+                            </div>
+                        </div>
+
+                        <div nz-card-grid [ngStyle]="gridStyle" (click)="changeMD(6)">
+                            <div class="item-card">
+                                <nz-avatar nzSize="small" nzText="阁"></nz-avatar>
+                                <span class="item-title">舞王宝阁</span>
+                            </div>
+                            <p class="item-content">个人毕设JavaWeb项目 - SSM</p>
+                            <div class="item-footer">
+                                <span class="item-author">by 四锅头</span>
+                                <span class="item-date">2016.01-2016.02</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                </nz-card>
+            </div>
+            <nz-card style="margin-top:20px;">
+                <ng-template #title>
+                    项目细节
+                </ng-template>
+                <ng-template #body>
+                    <div class="item-markdown" [hidden]="markdown!=1">
+                        <h2>NG-SPORTS是什么?</h2>
+                        <p>四锅头同学闲暇之余制作的的Angular5 + springboot运动健身网站</p>
+                        <p>本网站用于学习,巩固该同学ng2+的知识,也是督促该同学减肥的重点项目</p>
+                        <h2>NG-SPORTS都用了什么东西？</h2>
+                        <p>前端方面: Angular5 + SCSS + NZ-ZORRO + HighCharts</p>
+                        <p>服务端方面: springboot + spring + mybatis + mysql</p>
+                        <p>跨源解决策略: CORS</p>
+                        <p>开发工具: vs code + eclipse; 构建和部署工具：angular/cli</p>
+                        <p>服务器: 阿里云centos 网站IP: 47.97.166.254</p>
+                        <h2>NG-SPORTS模块如何划分?</h2>
+                        <p>根模块: appModule 组件包括 header(头部导航) home(主页) author-introduce(作者简介) </p>
+                        <p>懒加载子模块: loginModule(登录模块) registerModule(注册模块) planModule(会员减肥计划) healthyModule(健身动作) healthyModule组件包括
+                            add-comment(评论) healthy(动作大全) picture(动作卡片 复用于home组件中)</p>
+                        <h2>NG-SPORTS中的一些知识</h2>
+                        <p>本项目运用了Angular中的service、pipe、router、FormsModule、ReactiveFormsModule、以及部分生命周期钩子的知识</p>
+                        <p>数据传递与存储: </p>
+                        <p>1.组建交互中运用了路由传参、@input、@output、service传参;</p>
+                        <p>2.前后端数据传递运用了HttpClient的get 和 post方法 采用CORS处理跨域;</p>
+                        <p>3.客户端缓存利用了local Storage存储信息;</p>
+                        <p>UI采用了阿里云 蚂蚁风格的 NG-ZORRO 0.6.14版本;图表为HighCharts;</p>
+                        <p>布局上面大方向采用了Float布局(NG-ZORRO栅格),训练效果模块采用Flex布局(自练习)</p>
+                        <h2>NG-SPORTS中遇到的困难和问题</h2>
+                        <p>1.感觉NG-ZORRO还不够强大,很多细节不够完善，需要自己修改样式(:host ::ng-deep )</p>
+                        <p>2.由于不想使用JSONP,也不想麻烦搭建nginx,最后采取H5 CORS方式，在服务端设置添加请求头完成跨域访问</p>
+                        <p>3.HighCharts如放在oninit钩子中启动会先于nz-row使显示位置错误，需设置timeout使其异步延后执行</p>
+                        <p>4.npm与cnpm混用 Angular/CLI容易出现问题,尽量改用npm进行下载(必要时需科学上网)</p>
+                    </div>
+
+                    <div class="item-markdown" [hidden]="markdown!=2">
+                        <h2>IPORT是什么?</h2>
+                        <p>i-port是日本野村证券的一款证券分析类超大型网站,原项目为Flex项目,本次开发属于技术重构.</p>
+                        <p>重构页面700+,六元素科技负责前端页面与逻辑重构</p>
+                        <h2>IPORT都用了什么东西？</h2>
+                        <p>框架要素: AngularJS1.5 + SCSS + HTML5 + TypeScript2.0 </p>
+                        <p>重要插件: Highcharts、SpreadJS、wijmo、部分uib-bootstrap(uib-tooltip、uib-modal等)</p>
+                        <p>CSS: 自作css 布局为基于table-cell 24等分的表格式布局</p>
+                        <p>构建工具: gulp</p>
+                        <p>webService端: C# C混合开发</p>
+                        <h2>我在IPORT负责了什么?</h2>
+                        <p>2017.03-2017.06(量产MOCK画面阶段).负责画面编写、测试</p>
+                        <p>2017.07-2017.10(MOCK画面大量生产阶段) 负责小部分复杂画面的编写,对部分同事的问题进行帮助和技术支持</p>
+                        <p>2012.11-2018.02(画面正式开发阶段) 进入共通函数小组进行共通函数的编写，包括普通function、angularjs directive、项目共通service以及部分插件的二次封装等</p>
+                        <h2>IPORT有什么难点和技术难题?</h2>
+                        <p>1.spreadjs 由于是收费软件,网络上的呼声不高，例如spreadjs行选择问题网络没有答案，需要paint重新手绘,则会带来新的卡顿问题，用户体验不好。总结:spreadjs坑太多</p>
+                        <p>2.AngularJS优化问题,无论新老ng,这都是一个令人头疼的问题，新版本模块化更清新还好解决,在IPORT中则只能通话少调用directive fliter尽量不使用差值表达式这一系列规则,可效果并不显著</p>
+                        <h2>IPORT一年后的总结</h2>
+                        <p>1.个人的代码质量得到提升.由于是对日项目规矩比较多,个人的代码风格也从野性派转为温顺,这是一个好事</p>
+                        <p>2.css和JS水平显著提升.这里重点感谢
+                            <b>Fred鱼</b> 在很多像js原型链,css布局这种细节上的问题对我的指导</p>
+                        <p>3.知识面的扩张.项目80%的chart和pdf印刷都由我开发,让我对Highcharts这些优秀插件了解更深</p>
+                        <h2>感谢</h2>
+                        <p>感谢公司总经理
+                            <b>王洪斌</b> 先生给予提供一个这样优秀的平台,以及对我未来选择方向的指导</p>
+                        <p>感谢IPORT PM
+                            <b>张强</b> 先生对我能力的信任,让我担当重要的任务</p>
+                        <p>感谢
+                            <b>全体IPORT项目组成员</b> 对我的帮助和支持</p>
+                    </div>
+
+                    <div class="item-markdown" [hidden]="markdown!=3">
+                        <h2>Smart Home是什么?</h2>
+                        <p>Smart Home是为日本若松连锁酒店提供的一套智能居住方案(ipad控制酒店房间) + 酒店后台ERP系统 的完整酒店自动化方案,目前已在日本知多、函館等多地上线</p>
+                        <h2>Smart Home都用了什么东西？</h2>
+                        <p>顾客(ipad): H5 + CSS3 + ionic1 + gulp</p>
+                        <p>后台ERP: Java快速开发平台 经典组合JSP + spring mvc + spring + mybaits + shiro + Ehcatch + mysql</p>
+                        <h2>我在Smart Home 负责什么？</h2>
+                        <p>ipad端: 部分画面的编写 + 部分与后端api接口对接</p>
+                        <p>后台:</p>
+                        <p>1. 首页房间安排的全部工作.</p>
+                        <p>2. 酒店餐饮、库管系统的全部工作.</p>
+                        <p>3. 旅游订单模块的全部工作.</p>
+                        <p>4. 酒店所有报表(10余种Excel)导出.</p>
+                        <h2>Smart Home有什么难点和技术难题?</h2>
+                        <p>1.ERP系统首页的拖拽分房、上方顾客信息滚动条的实现</p>
+                        <p>2.餐饮订单系统和顾客住宿中产生的各种复杂的税的计算</p>
+                        <p>3.Excel导出功能的制作,其中包括了各种酒店的复杂数据处理.报表导出插件 JXLS</p>
+                        <h2>感谢</h2>
+                        <p>感谢项目负责人
+                            <b>Jim Wang</b> 先生对我的指导和帮助,对我在工作未来大方向上的指引.</p>
+
+                        <p>感谢
+                            <b>小镇</b> 先生对我在项目和技术细节的指导</p>
+
+                        <p>感谢
+                            <b>ivy、ウミ</b>同学的大力帮助</p>
+                    </div>
+                </ng-template>
+            </nz-card>
+        </div>
+        <div nz-col [nzSpan]="10">
+
+            <div id="container" style="width:100%;height:455px;margin:0 auto;"></div>
+
+
+            <nz-card style="margin-top:20px;">
+                <ng-template #title>
+                    专业技能
+                </ng-template>
+                <ng-template #body>
+                    <nz-table #nzTable [nzIsPagination]="'false'" [nzCustomNoResult]="'true'">
+                        <tbody nz-tbody>
+                            <tr nz-tbody-tr *ngFor="let skill of skills">
+                                <td nz-td>
+                                    <span calss="table-span" style=" color: rgba(0, 0, 0, 0.43);
+                              margin-left: 12px;
+                              line-height: 30px;
+                              height: 30px;
+                              display: inline-block;
+                              vertical-align: bottom;
+                              font-size: 15px;
+                              font-family: '楷体';
+                              font-weight: 550;">{{skill}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </ng-template>
+            </nz-card>
+        </div>
+    </div>
+    <br>
+    <nz-card class="thatYears">
+        <ng-template #title>
+            我在六元素的这几年
+        </ng-template>
+
+        <ng-template #body>
+            <ng-container *ngIf="!rgsFlag else elseTemplate">
+                <h2>六元素科技的英文缩写是？</h2>
+                <nz-input [(ngModel)]="rgs" [nzPlaceHolder]="'请输入六元素英文缩写'" [nzSize]="'large'" style="width:300px;margin-top:10px;"></nz-input>
+                <button nz-button [nzType]="'primary'" (click)="rgsClick()">
+                    <span>提交</span>
+                </button>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <h1>下面这些话会在3月31日前删除</h1>
+                <audio src="assets/music/again.mp3" controls="controls"></audio>
+                <p> &nbsp;&nbsp;2016年8月,我怀着不安和惶恐来到了大连 这座陌生的城市。</p>
+                <p> &nbsp;&nbsp;我还记得那天上午,我走进六元素大门的时候，心里还有一些激动和紧张。当时面试我的那个人叫
+                    <b>王伟 </b>,哈哈 就是我后来口中的Jim Wang，一个看起来就很高端的人。记得那天的谈话内容,Jim Wang跟我讲了分布式,讲了前端变革 ,告诉我JSP已经过时了。那个时候我的心是异常激动的,我终于走进了这个像黑洞一样未知的深邃的
+                    <b>IT领域 </b>,幸运的是还有一个明灯在指引我，随后我加入了到了六元素这个集体中。</p>
+                <p>&nbsp;&nbsp;正式上班后,我发现自己可以轻松的完成Jim安排给我的工作,心里有些窃喜，感觉这些东西也不过如此，也正是这种想法害了我。上边前两周还是比较努力的，即使是回到家里也会看一看教学视频。但也仅限于此了
+                    ，我觉得找到工作后没有后顾之忧了。我的惰性开始养成，我变得不爱学习，不爱钻研，一些工作上的事情也是得过且过不会去想，即使是王哥告诉我让我去学什么东西(还记得让我去学JS闭包 一些Linx命令啥的) ,当时我没有意识到这是多宝贵的财富，有一个人愿意告诉你你该如何去学习，怎么去学习，我像应付考试一样随便上网查了下，等到Jim问起的时候回答的特别的
+                    差。但当时我还没有意识到这很严重，我认为不会了就去问
+                    <b>吴晓镇</b> ， 去问
+                    <b>Jim Wang</b>就好了(在这特别感谢 吴晓镇 是我在技术细节的第一个导师)。浑浑噩噩的直到Jim的离开。
+                </p>
+                <p>&nbsp;&nbsp;Jim走后,吴晓镇也因为家里的事情休长假，ivy被调到其他组。研发组就剩下我一个人，这一排 我自己 两天，我开始害怕，我不知道自己该干什么,温泉项目当时已经结束，我想过离开，但我害怕不敢走
+                    ，后来王老板把我调到了i-port,我开始了新的项目，当时感觉得到了解脱。
+                </p>
+                <p>&nbsp;&nbsp;进入iport后,当事人比较少只有
+                    <b>张强</b> 领着我们5 6 个人做量产MOCK画面。强哥和Jim不一样,我认为他属于典型的吃苦耐劳型PM,在他的领导下下我们的项目正式启动了起来。 我开始接触AngularJS TypeScript Highcahrts接触到前端,之前虽然在酒店项目也做过Angular,做过一些js小插件,就比如说我做的拖拽客户信息的那个轮播条(现在想想当时我还是挺强的),但是存粹的前端项目没有接触过,
+                    我认为自己和
+                    <b>于明江</b> 一样,和
+                    <b>雷德军</b> 一样，大家的水平都差不多，心里也不太服气，直到后来真正上手的时候我才明白我们的差距有多大，我有一点醒悟，但是仅仅有一点。</p>
+                <p>&nbsp;&nbsp;我爱装，不爱服输，内心总是觉得谁都不如自己，不会了硬撑着，不会去问谁，有些时候一憋就是一两天，那段时间挺压抑的，想回去接着做酒店该多好啊。说着也巧，恰好酒店方面来了新的需求, 就这样，我又自己挑起了酒店项目这杆旗，但是和
+                    <b>韩林奇</b> (酒店负责人 我习惯叫他韓さん)直接交流,修改酒店项目的时候，我突然意识到离开了Jim，吴晓镇，这个我做了半年的项目竟然如此陌生，很多的地方搞砸了，写的很多坑 ，即使韓さん鼓励我说我已经很强了,但是我当时没好意思说这东西能坚持几天，果然问题出现了，大量的问题摆在我面前，我开始害怕韓さん通过微信叫我，我甚至害怕手机响，晚上睡觉的时候需要把手机关机才能睡着，好在时间不长，工程结束了。
+                    我又回到了i-port，那时候
+                    <b>小雷</b> 离开，我又失去了一个请教高手的机会，浑浑噩噩,又到了8月份。
+                </p>
+                <p>&nbsp;&nbsp;开始转变是在8月份,当我和
+                    <b>于明江</b> 同时做一件事情的时候，我发现自己总是比不过他，我们之间是有差距的。也是这时候我强大的好胜心告诉我，我已经混了一年了,我开始向他请教，请叫自己应该如何去做，如何去学习(这里着重感谢我第二任技术导师,于明江同学对我的指导)。
+                    同一时间，我自己开始深入接触技术 接触springboot,接触Angular4(哈哈那时候还是4),接触ES6,接触github，接触大量的信息数据，然而我还是没有找到好学习方法，好的技术太多的，新的技术也太多了，有一些眼花缭乱。
+                </p>
+                <p>&nbsp;&nbsp;后来我被调到了共通组，在那里我可以随时与
+                    <b>于明江</b> 探讨，也是学了很多东西，听到比较新鲜的东西就去学，那时我最喜欢的就是周五，并不是我可以开心地去玩了，而是我可以学习一整夜第二天还不用来上班，我对技术开始痴迷，疯狂，甚至是大年夜我还坐在家里看着JS原型链的一些东西一夜未眠。</p>
+                <p>&nbsp;&nbsp;日子一天一天的过去了,我因为一些原因不得不离开六元素。2月9日，我找到了
+                    <b>王老板</b> (我还是喜欢这么叫他),王老板技术出身，技术能力很强，我跟他聊了想离职的事情，王老板跟我说了一下他的构想，六元素的未来， 很广阔但我还是选择了离开，我们谈完后我问他我应该如何发展，王老板很大度，
+                    给我讲了一些选择和他自身的经历，让我专注一门不被其他因素所影响，让我受益良多。
+                </p>
+                <p>&nbsp;&nbsp;三月份结束我就要离开了,很享受在六元素和大家一起度过的日子,感谢各位同事给我的帮助和照顾,如何不嫌弃我水平低微的话我们可以随时探讨，我会把我所知道的全部分享给大家，不会保留。如果对本项目感兴趣的，我会在下周末前把项目全部完成，放到github上，也可以通过这个项目在业余时交流。</p>
+                <p>&nbsp;&nbsp;最后感谢大家在这一年半的的帮助，望大家不要松懈，保持初心，勿要浮躁，祝六元素越办越好，大家的钱包越来越鼓！！！！！</p>
+                <p  style="text-align:right;">RGS齐志强</p>
+                <p  style="text-align:right;">2018.3.18</p>
+            </ng-template>
+
+
+        </ng-template>
+    </nz-card>
+</div>
+
+<br>

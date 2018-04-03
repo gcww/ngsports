@@ -1,0 +1,52 @@
+<div nz-row class="navbg">
+  <div nz-col [nzSpan]="1"></div>
+  <div nz-col [nzSpan]="5" style="border:0;">
+    <a [routerLink]="[ '/']">
+      <img class="logo" alt="logo" src="assets/images/logo.png">
+    </a>
+  </div>
+
+  <div nz-col [nzSpan]="10">
+    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 64px;" class="ul-border-bottom">
+      <li nz-menu-item [routerLink]="[ '/home']">
+        <i class="anticon anticon-mail"></i> NG-SPORTS</li>
+      <li nz-menu-item [routerLink]="[ '/healthy/healthyList']">
+        <i class="anticon anticon-rocket"></i> 健身动作</li>
+      <li nz-menu-item [routerLink]="[ '/plan']">
+        <i class="anticon anticon-trophy"></i> 训练效果</li>
+      <li nz-menu-item [routerLink]="[ '/author']">
+        <i class="anticon anticon-user"></i> 作者简介</li>
+    </ul>
+  </div>
+  <div nz-col [nzSpan]="4">
+    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height: 64px;border-bottom: 0;" class="li-right">
+      <ng-container *ngIf="userLoginCheck; else elseTemplate">
+        <li nz-menu-item [routerLink]="[ '/login']">
+          登录
+        </li>
+        <li nz-menu-item [routerLink]="[ '/register']">
+          注册
+        </li>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <li nz-menu-item (click)="logout()">
+          退 出
+        </li>
+        <li nz-menu-item>
+          {{username}}
+        </li>
+      </ng-template>
+
+
+
+    </ul>
+  </div>
+  <div nz-col [nzSpan]="4"></div>
+
+</div>
+
+<nz-modal [nzVisible]="isVisible"  [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzWidth]="'300px'">
+  <ng-template #modalContent>
+   <p>您是否真的要退出？</p>
+  </ng-template>
+</nz-modal>

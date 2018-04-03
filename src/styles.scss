@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+:host ::ng-deep .logo {
+    width: 120px;
+    height: 31px;
+    background: #333;
+    border-radius: 6px;
+    margin: 16px 24px 16px 0;
+    float: left;
+}
+
+.my-nav {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    border-width: 0 0 1px;
+    padding: 0 !important;
+    background: #fff!important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    z-index: 99;
+}
+
+.home {
+    padding: 70px;
+    min-height: 700px;
+    max-width: 1400px;
+    min-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-content {
+    background: #f0f2f5;
+    background-image: url(./assets/images/ngSportsBg.svg);
+    width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.align_c {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.maring_b30 {
+    margin-bottom: 30px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.main{
+    margin-top: 70px;
+}

@@ -1,0 +1,155 @@
+<nz-carousel nzAutoPlay style="margin-top:30px;">
+  <div nz-carousel-content *ngFor="let item of array;let i=index;" [style.background-image]="'url(assets/images/lunbo' + i +'.jpg)'"
+    class="picture">
+  </div>
+</nz-carousel>
+<br>
+<br>
+<div>
+  <span class="index_title align_c" style="margin-top:0;">
+    <span>精品课程展示</span>
+    <span>Excellent course display</span>
+    <img src="assets/images/ititle.png"> 
+  </span> 
+</div>
+<div nz-row [nzGutter]="24">
+  <div nz-col [nzSpan]="6" *ngFor="let goods of goodsList; let i = index;" style="margin-bottom:15px">
+    <app-picture [goods]="goods" [index]="i"></app-picture> 
+  </div>
+</div>
+<br>
+<div>
+    <span class="index_title align_c" style="margin-top:0;">
+      <span>金牌教练介绍</span>
+      <span>Xiaxie Dian Yingyu</span>
+      <img src="assets/images/ititle.png">
+    </span>
+  </div>
+  <div nz-row [nzGutter]="24"></div>
+<div class="sfs">
+  <div class="child c_left">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="10">
+            <img src="assets/images/head/zhangjiahui.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="14">
+            <span>大渣好，我是渣渣辉</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">01</span>
+  </div>
+  <div class="child c_right">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="9">
+            <img src="assets/images/head/wuzhenyu.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="15">
+              <span>NGSPORTS船新版本</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">02</span>
+  </div>
+  <div class="child c_left">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="9">
+            <img src="assets/images/head/chenxiaochun.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="15">
+              <span>几虚体验三番宗</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">03</span>
+  </div>
+  <div class="child c_right">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="9">
+            <img src="assets/images/head/gutianle.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="15">
+              <span>雷奏会干我一样</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">04</span>
+  </div>
+  <div class="child c_left">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="9">
+            <img src="assets/images/head/linzicong.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="15">
+              <span>爱上介款健身网站</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">05</span>
+  </div>
+  <div class="child c_right">
+    <nz-card class="card">
+      <ng-template #body>
+        <div nz-row [nzType]="'flex'" [nzJustify]="'start'">
+          <div nz-col [nzSpan]="9">
+            <img src="assets/images/head/fanwei.jpg" style="height:117px;width:100%;">
+          </div>
+          <div nz-col [nzSpan]="15">
+              <span>上当后请不要拨打110...</span>
+          </div>
+        </div>
+      </ng-template>
+    </nz-card>
+    <span class="n">06</span>
+  </div>
+</div>
+<br>
+<div>
+  <span class="index_title align_c" style="margin-top:0;">
+    <span>成功案例</span>
+    <span>successful case</span>
+    <img src="assets/images/ititle.png">
+  </span>
+  <div nz-row [nzGutter]="128">
+    <div nz-col [nzSpan]="12">
+      <nz-card style="width:100%">
+        <ng-template #body>
+          <div class="custom-card">
+            <h2 class="loseh2">减肥前</h2>
+          </div>
+          <div class="custom-image">
+            <img alt="example" width="100%" src="assets/images/home/jianfeiqian.jpg" />
+          </div>
+        </ng-template>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <nz-card style="width:100%;">
+        <ng-template #body>
+          <div class="custom-card">
+            <h2 class="loseh2">减肥后</h2>
+          </div>
+          <div class="custom-image">
+            <img alt="example" width="100%" src="assets/images/home/jianfeihou.jpg" />
+          </div>
+        </ng-template>
+      </nz-card>
+    </div>
+  </div>
+</div>
+<br>

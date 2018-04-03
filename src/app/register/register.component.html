@@ -1,0 +1,95 @@
+<div [@slideInLeft]="slideInLeft" style="min-height:760px;" nz-row [nzType]="'flex'" [nzAlign]="'middle'">
+  <div nz-col [nzSpan]="7"></div>
+  <div nz-col [nzSpan]="10">
+    <img alt="logo" class="align_c maring_b30" src="assets/images/logo.png">
+    <nz-card>
+      <ng-template #title>
+        注册
+      </ng-template>
+      <ng-template #extra>
+        <a [routerLink]="[ '/login']">已有账号？请登录</a>
+      </ng-template>
+      <ng-template #body>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm($event,validateForm.value)"> 
+          <div nz-form-item nz-row>
+            <div nz-form-label nz-col [nzSpan]="7">
+              <label nz-form-item-required>您的昵称</label>
+            </div>
+            <div nz-col [nzSpan]="12" nz-form-control nzHasFeedback>
+              <nz-input id="username" formControlName="userName" [nzType]="'text'" [nzPlaceHolder]="'请输入您的昵称'" [nzSize]="'large'">
+              </nz-input>
+              <div nz-form-explain *ngIf="getFormControl('userName').dirty&&getFormControl('userName').hasError('required')">昵称不能为空，勇士!</div>
+              <div nz-form-explain *ngIf="getFormControl('userName').dirty&&getFormControl('userName').hasError('duplicated')">好名子被狗起了呢，勇士!</div>
+              <div nz-form-explain *ngIf="getFormControl('userName').dirty&&getFormControl('userName').pending">稍等...</div>
+            </div>
+          </div>
+          <div nz-form-item nz-row>
+            <div nz-form-label nz-col [nzSpan]="7">
+              <label nz-form-item-required>E-mail</label> 
+            </div>
+            <div nz-col [nzSpan]="12" nz-form-control nzHasFeedback>
+              <nz-input formControlName="email" [nzPlaceHolder]="'请输入您的email'" [nzType]="'email'" [nzSize]="'large'">
+              </nz-input>
+              <div nz-form-explain *ngIf="getFormControl('email').dirty&&getFormControl('email').hasError('email')">请输入正确的E-mail，勇士!</div>
+              <div nz-form-explain *ngIf="getFormControl('email').dirty&&getFormControl('email').hasError('required')">E-mail不能为空，勇士!</div>
+            </div>
+          </div>
+          <div nz-form-item nz-row>
+            <div nz-form-label nz-col [nzSpan]="7">
+              <label nz-form-item-required>手机号码</label>
+            </div>
+            <div nz-col [nzSpan]="12" nz-form-control nzHasFeedback>
+              <nz-input formControlName="phone" [nzPlaceHolder]="'请输入您的手机号'" [nzType]="'phone'" [nzSize]="'large'">
+              </nz-input>
+              <div nz-form-explain *ngIf="getFormControl('phone').dirty&&getFormControl('phone').hasError('phone')">请输入正确的手机号，勇士!</div>
+              <div nz-form-explain *ngIf="getFormControl('phone').dirty&&getFormControl('phone').hasError('required')">手机号不能为空，勇士!</div>
+            </div>
+          </div>
+          <div nz-form-item nz-row>
+            <div nz-form-label nz-col [nzSpan]="7">
+              <label nz-form-item-required>生日</label>
+            </div>
+            <div nz-col [nzSpan]="12" nz-form-control>
+              <nz-datepicker formControlName="birthDay" [nzSize]="'large'" [nzPlaceHolder]="'选择您的生日'" style="width: 100%;"></nz-datepicker>
+              <div nz-form-explain *ngIf="getFormControl('birthDay').dirty&&getFormControl('birthDay').hasError('required')">请输入您的生日!</div>
+              <div nz-form-explain *ngIf="getFormControl('birthDay').dirty&&getFormControl('birthDay').hasError('expired')">你是真的屌!</div>
+            </div>
+          </div>
+          <div nz-form-item nz-row>
+            <div nz-col [nzSpan]="7" nz-form-label>
+              <label nz-form-item-required>密码</label>
+            </div>
+            <div>
+              <div nz-col [nzSpan]="12" nz-form-control nzHasFeedback>
+                <nz-input formControlName="password" [nzPlaceHolder]="'请输入您的密码'" [nzType]="'输入您的密码'" [nzSize]="'large'" (ngModelChange)="validateConfirmPassword()">
+                </nz-input>
+                <div nz-form-explain *ngIf="validateForm.get('password').dirty&&validateForm.get('password').hasError('required')">密码不能为空，勇士!</div>
+              </div>
+            </div>
+          </div>
+          <div nz-form-item nz-row>
+            <div nz-col [nzSpan]="7" nz-form-label>
+              <label nz-form-item-required>确认密码</label>
+            </div>
+            <div nz-col [nzSpan]="12" nz-form-control nzHasFeedback>
+              <nz-input formControlName="passwordConfirmation" [nzType]="'password'" [nzPlaceHolder]="'请输入确认密码'" [nzSize]="'large'">
+              </nz-input>
+              <div nz-form-explain *ngIf="getFormControl('passwordConfirmation').dirty&&getFormControl('passwordConfirmation').hasError('required')">确认密码不能为空，勇士!</div>
+              <div nz-form-explain *ngIf="getFormControl('passwordConfirmation').dirty&&getFormControl('passwordConfirmation').hasError('confirm')">两个密码必须相同!</div>
+            </div>
+          </div>
+          <div nz-form-item nz-row> 
+            <div nz-col [nzOffset]="7" [nzSpan]="12" nz-form-control>
+              <button nz-button [nzType]="'primary'" [nzSize]="'large'" [disabled]="!validateForm.valid">注册</button>
+              <button nz-button [nzSize]="'large'" (click)="resetForm($event)">清空</button>
+            </div>
+          </div>
+        </form>
+      </ng-template>
+    </nz-card>
+
+  </div>
+  <div nz-col [nzSpan]="7"></div>
+</div>
+
+<a [hidden]="'true'" id="navigateToLogin" [routerLink]="[ '/login']" ></a>
