@@ -28,7 +28,7 @@ import { HeaderLoginService } from './service/header-login.service';
     AuthorIntroduceComponent,
   ],
   imports: [
-    HealthyModule,
+    HealthyModule,//HealthyModule不知到这么引入该模块的其他内容是不是也加载进来了
     BrowserModule,
     FormsModule,
     HttpClientModule,
